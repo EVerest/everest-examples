@@ -1,0 +1,14 @@
+settings:
+  telemetry_enabled: true
+active_modules:
+  example_pub:
+    config_module:
+      enum_test: one
+      voltage: 12
+    module: ExamplePublisher
+  example_sub:
+    connections:
+      example_pub:
+        - implementation_id: example_pub
+          module_id: example_pub
+    module: ExampleSubscriber

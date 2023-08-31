@@ -1,0 +1,21 @@
+description: >-
+  This interface defines an example interface that uses multiple framework
+  features
+cmds:
+  do_something:
+    description: This command checks if something is stored under a given key
+    arguments:
+      arg:
+        description: Argument
+        type: string
+    result:
+      description: Returns 'true' if arg is 'hello there'
+      type: boolean
+vars:
+  something:
+    description: Provides some value
+    type: number
+  voltage_V:
+    description: Voltage in Volts
+    type: object
+    $ref: /units#/Voltage

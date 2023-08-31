@@ -1,0 +1,2 @@
+ev_add_module(ExamplePublisher)
+ev_add_module(ExampleSubscriber)

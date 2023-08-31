@@ -1,0 +1,12 @@
+description: Simple example module written in C++ and using the other example module
+provides:
+  main:
+    description: Provide the empty interface if you provide nothing (this is a workaround)
+    interface: empty
+requires:
+  example_pub:
+    interface: example_publisher
+metadata:
+  license: https://opensource.org/licenses/Apache-2.0
+  authors:
+    - Kai-Uwe Hermann
