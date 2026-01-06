@@ -14,6 +14,7 @@
 
 // ev@75ac1216-19eb-4182-a85c-820f1fc2c091:v1
 // insert your custom include headers here
+#include <everest/timer.hpp>
 // ev@75ac1216-19eb-4182-a85c-820f1fc2c091:v1
 
 namespace module {
@@ -50,6 +51,7 @@ private:
     // ev@3370e4dd-95f4-47a9-aaec-ea76f34a66c9:v1
     // insert your private definitions here
     std::thread publisher_thread;
+    Everest::SteadyTimer steady_timer;
     // ev@3370e4dd-95f4-47a9-aaec-ea76f34a66c9:v1
 };
 

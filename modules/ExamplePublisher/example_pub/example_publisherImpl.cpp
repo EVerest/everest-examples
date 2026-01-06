@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: Apache-2.0
 // Copyright Pionix GmbH and Contributors to EVerest
 
+#include <chrono>
+
 #include "example_publisherImpl.hpp"
 
 namespace module {
@@ -19,6 +21,7 @@ void example_publisherImpl::ready() {
             std::this_thread::sleep_for(std::chrono::seconds(5));
         }
     });
+    this->steady_timer.timeout([this]() { EVLOG_info << "timeout"; }, std::chrono::seconds(3));
 }
 
 bool example_publisherImpl::handle_do_something(std::string& arg) {
